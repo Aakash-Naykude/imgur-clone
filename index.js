@@ -14,8 +14,7 @@ function showImage(items) {
     let div = document.createElement("div");
     let img = document.createElement("img");
     img.src = item.urls.small;
-    let title = document.createElement("h1");
-    div.append(img, title);
+    div.append(img);
     container.insertAdjacentElement("beforeend", div);
   });
 }
@@ -27,10 +26,8 @@ const showData = () => {
   }, 200);
 };
 window.addEventListener("scroll", () => {
-  if (
-    window.scrollY + window.innerHeight >=
-    document.documentElement.scrollHeight
-  ) {
+  const { scrollHeight, scrollTop, clientHeight } = document.documentElement;
+  if (scrollTop + clientHeight >= scrollHeight) {
     showData();
   }
 });
