@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+.infinite-scroll {
+  max-width: 1270px;
+  margin: 0 auto;
+  columns: 5;
+  column-gap: 10px;
+}
+.infinite-scroll > div {
+  width: 244px;
+  margin-bottom: 5px;
+  break-inside: avoid;
+  border-radius: 8px;
+}
+.infinite-scroll > div >img {
+  width: 244px;
+  border-radius: 8px;
+}
