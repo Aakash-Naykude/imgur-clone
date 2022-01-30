@@ -39,3 +39,12 @@ window.addEventListener("scroll", () => {
     showData();
   }
 });
+
+//-------------search engine---------------------------\\
+let showbox = document.getElementById("searchresults");
+let input = document.getElementById("input");
+var sets;
+input.addEventListener("input", startShowingResults);
+function startShowingResults(e) {
+  showbox.textContent = e.target.value;
+}
