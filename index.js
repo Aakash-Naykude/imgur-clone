@@ -95,7 +95,7 @@ async function showSuggestions(inputvalue) {
     p.style.fontSize = "larger";
     p.onclick = function () {
       localStorage.setItem("imgur", JSON.stringify(resultdata));
-      window.location.href = "results.html";
+      //window.location.href = "results.html";
     };
     showbox.append(p);
   });
