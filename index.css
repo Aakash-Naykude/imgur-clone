@@ -57,7 +57,7 @@ body {
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 80px 60px rgba(0, 0, 0, 0.1);
 }
-.navbar > div {
+.navbar-inner {
   display: flex;
 }
 .navy-blue {
@@ -98,15 +98,16 @@ body {
 
 .form {
   color: #555;
-  display: flex;
-  /* padding: 2px; */
   border-radius: 5px;
   margin-top: 1.3%;
   height: 35px;
   background-color: #454469;
-  width: 35%;
+  width: 40%;
 }
-
+.form-group {
+  display: flex;
+  width: 100%;
+}
 #input {
   border: none;
   background: transparent;
@@ -143,6 +144,7 @@ body {
 .widgets {
   width: 25%;
   margin-top: 1%;
+  display: flex;
 }
 .icon {
   margin-top: 1.5%;
