@@ -103,6 +103,7 @@ body {
   height: 35px;
   background-color: #454469;
   width: 40%;
+  margin-left: 10%;
 }
 .form-group {
   display: flex;
@@ -146,6 +147,8 @@ body {
   width: 25%;
   margin-top: 1%;
   display: flex;
+  justify-content: space-between;
+  margin-right: 1%;
 }
 .icon {
   margin-top: 1.5%;
@@ -241,6 +244,7 @@ body {
   color: white;
   padding: 15px;
   overflow: scroll;
+  display: none;
 }
 #searchresults::-webkit-scrollbar {
   width: 0;

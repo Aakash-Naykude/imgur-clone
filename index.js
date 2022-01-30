@@ -47,4 +47,38 @@ var sets;
 input.addEventListener("input", startShowingResults);
 function startShowingResults(e) {
   showbox.textContent = e.target.value;
+  var inputvalue = input.value;
+
+  if (inputvalue != " ") {
+    showbox.style.display = "block";
+  }
+  if (inputvalue == "") {
+    showbox.style.display = "none";
+  }
+
+  startdebounce(showSuggestions, 3000);
+  function startdebounce(showSuggestions, time) {
+    if (sets) {
+      clearTimeout(sets);
+    }
+    sets = setTimeout(() => {
+      showSuggestions(inputvalue);
+    }, time);
+  }
+}
+
+async function showSuggestions(inputvalue) {
+  showbox.textContent = null;
+  let res = await fetch(
+    `https://serpapi.com/search.json?engine=google&q=${inputvalue}&google_domain=google.com&gl=us&hl=en&api_key=a97958c2af388fd67fa25a5ffff96640f9c08804383e96d7a5048e372e559f73`
+  );
+  let data = await res.json();
+  console.log(data);
+  // let resultdata = data.related_searches;
+  // resultdata.forEach(() => {
+  //   let p = document.createElement("p");
+  //   p.innerText = d.title;
+  //   p.onclick = function () {};
+  //   showbox.append(p);
+  // });
 }
