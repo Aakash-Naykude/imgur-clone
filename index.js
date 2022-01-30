@@ -8,16 +8,23 @@ const loadImage = async () => {
   let data = await res.json();
   showImage(data);
 };
+
 loadImage();
+
 function showImage(items) {
   items.forEach((item) => {
     let div = document.createElement("div");
     let img = document.createElement("img");
     img.src = item.urls.small;
-    div.append(img);
+    let title = document.createElement("p");
+    title.innerText = item.description;
+    title.style.color = "#ffffff";
+    title.style.fontSize ="1.4vw"
+    div.append(img,title);
     container.insertAdjacentElement("beforeend", div);
   });
 }
+
 const showData = () => {
   setTimeout(() => {
     pagenumber++;
@@ -25,6 +32,7 @@ const showData = () => {
     loadImage();
   }, 200);
 };
+
 window.addEventListener("scroll", () => {
   const { scrollHeight, scrollTop, clientHeight } = document.documentElement;
   if (scrollTop + clientHeight >= scrollHeight) {
