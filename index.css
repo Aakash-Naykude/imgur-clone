@@ -47,23 +47,27 @@ body {
   border-radius: 8px;
 }
 
-.navbar {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  background-color: #171544;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 80px 60px rgba(0, 0, 0, 0.1);
-}
+
 .navbar-inner {
   display: flex;
 }
 .navy-blue {
   background-color: #171544;
-  width: 100%;
+  border:1px solid red;
+  width: 99.5%;
   height: 400px;
+  margin-top: 0%;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  background-color: #171544;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 80px 60px rgba(0, 0, 0, 0.1);
 }
 
 .navImg {
@@ -147,21 +151,25 @@ body {
   width: 25%;
   margin-top: 1%;
   display: flex;
+<<<<<<< Updated upstream
   justify-content: space-between;
   margin-right: 1%;
+=======
+  
+>>>>>>> Stashed changes
 }
 .icon {
   margin-top: 1.5%;
-  margin-left: 3%;
+  margin-left: 0%;
 }
 
 .adv_btn {
   border: none;
   background-color: #6432f9;
   margin-top: 1.5%;
-  width: 50%;
+  width: 40%;
   height: 35px;
-  margin-left: 4%;
+  margin-left: 2%;
   color: #ffffff;
   font-size: 1.2vw;
   font-weight: 700;
@@ -176,15 +184,15 @@ body {
 }
 
 .sign {
-  margin-left: 3%;
-  margin-top: 1.7%;
-  width: 20%;
+  margin-left: 2%;
+  margin-top: 2.5%;
+  font-size: 1.2vw
 }
 .sign_btn {
   border: none;
   background-color: #1bb76e;
   margin-top: 1.5%;
-  width: 30%;
+  width: 25%;
   height: 35px;
   margin-left: 4%;
   color: #ffffff;
@@ -231,11 +239,23 @@ body {
   margin-right: 10%;
 }
 
-.div1 {
-  width: 20%;
+.innerDiv {
+  width: 85%;
   height: 50px;
-  border: 5px solid black;
+  border: 2px solid black;
+  margin-top: 1%;
+  margin-left: 7%;
+  margin-right: 7%;
 }
+
+.heading{
+  font-size:2vw;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 7%;
+  color:#aed8ea;
+}
+
 #searchresults {
   border-radius: 5px;
   margin-top: 2%;
