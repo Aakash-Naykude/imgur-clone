@@ -7,6 +7,7 @@ const loadImage = async () => {
   );
   let data = await res.json();
   showImage(data);
+  console.log(data);
 };
 
 loadImage();
@@ -17,10 +18,23 @@ function showImage(items) {
     let img = document.createElement("img");
     img.src = item.urls.small;
     let title = document.createElement("p");
-    title.innerText = item.description;
+    // title.innerText = item.sponsorship.tagline;
     title.style.color = "#ffffff";
-    title.style.fontSize = "1.4vw";
-    div.append(img, title);
+    title.style.fontSize = "1vw";
+
+    let div1 = document.createElement("div");
+    div1.style.display = "flex";
+    div1.style.justifyContent = "space-between";
+    div1.style.color = "#ffffff"
+    let like = document.createElement("p");
+    let collection = document.createElement("p");
+    let view = document.createElement("p");
+
+    // like.innerText = item.sponsorship.sponsor.total_likes
+    collection.innerText =Math.round(Math.random()*300)
+    view.innerText = Math.round(Math.random() * 10) + "k"
+    div1.append(like,collection,view)
+    div.append(img);
     container.insertAdjacentElement("beforeend", div);
   });
 }
