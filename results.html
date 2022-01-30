@@ -6,11 +6,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Results</title>
   </head>
+  <style>
+    * {
+      margin: 0;
+    }
+    * {
+      font-family: "Open Sans", sans-serif;
+    }
+    body {
+      background-color: #2e3035;
+    }
+    .infinite-scroll {
+      margin: 0 auto;
+      columns: 5;
+      column-gap: 2%;
+      margin-top: -2em;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    .infinite-scroll > div {
+      width: 100%;
+      margin-bottom: 2%;
+      break-inside: avoid;
+      border-radius: 8px;
+    }
+
+    .infinite-scroll > div:hover {
+      border: 3px solid #8367ff;
+      box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+    }
+    @media screen and (max-width: 900px) {
+      .infinite-scroll {
+        margin: 0 auto;
+        columns: 3;
+        column-gap: 2%;
+        margin-top: -3em;
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .infinite-scroll {
+        margin: 0 auto;
+        columns: 2;
+        column-gap: 2%;
+        margin-top: -3em;
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+    }
+    .infinite-scroll > div > img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  </style>
   <body>
     <h1>result page</h1>
-    <div></div>
+
+    <h1 style="text-align: center">Explore posts</h1>
+    <div class="infinite-scroll"></div>
   </body>
 </html>
 <script>
+  const container = document.querySelector(".infinite-scroll");
+  var pagenumber = 1;
+
+  const loadImage = async () => {
+    let res = await fetch(
+      `https://api.unsplash.com/photos/?client_id=Xq62kux9RBMODPUloapAwC1eHiCNZRVh6zaeZk0K8ZM&per_page=15&page=${pagenumber}`
+    );
+    let data = await res.json();
+    showImage(data);
+  };
+
+  loadImage();
+
+  function showImage(items) {
+    items.forEach((item) => {
+      let div = document.createElement("div");
+      let img = document.createElement("img");
+      img.src = item.urls.small;
+      let title = document.createElement("p");
+      title.innerText = item.description;
+      title.style.color = "#ffffff";
+      title.style.fontSize = "1.4vw";
+      div.append(img, title);
+      container.insertAdjacentElement("beforeend", div);
+    });
+  }
+
+  const showData = () => {
+    setTimeout(() => {
+      pagenumber++;
+      console.log(pagenumber);
+      loadImage();
+    }, 200);
+  };
+
+  window.addEventListener("scroll", () => {
+    const { scrollHeight, scrollTop, clientHeight } = document.documentElement;
+    if (scrollTop + clientHeight >= scrollHeight) {
+      showData();
+    }
+  });
+
   let data = JSON.parse(localStorage.getItem("imgur"));
 </script>
