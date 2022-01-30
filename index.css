@@ -52,11 +52,7 @@ body {
 }
 .navy-blue {
   background-color: #171544;
-<<<<<<< Updated upstream
-  border: 1px solid red;
-=======
   border:1px solid #171544;
->>>>>>> Stashed changes
   width: 99.5%;
   height: 400px;
   margin-top: 0%;
@@ -277,7 +273,7 @@ body {
 #searchresults > p {
   height: 25px;
   padding: 6px;
-
+}
 
 
 .div1{
