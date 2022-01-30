@@ -19,8 +19,8 @@ function showImage(items) {
     let title = document.createElement("p");
     title.innerText = item.description;
     title.style.color = "#ffffff";
-    title.style.fontSize ="1.4vw"
-    div.append(img,title);
+    title.style.fontSize = "1.4vw";
+    div.append(img, title);
     container.insertAdjacentElement("beforeend", div);
   });
 }

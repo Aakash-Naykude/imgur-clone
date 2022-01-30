@@ -1,11 +1,11 @@
 * {
   margin: 0;
 }
-*{
-  font-family: 'Open Sans', sans-serif;
+* {
+  font-family: "Open Sans", sans-serif;
 }
 body {
-  background-color:#2E3035;
+  background-color: #2e3035;
 }
 .infinite-scroll {
   margin: 0 auto;
@@ -14,7 +14,6 @@ body {
   margin-top: -2em;
   margin-left: 10%;
   margin-right: 10%;
-  
 }
 
 .infinite-scroll > div {
@@ -25,20 +24,15 @@ body {
 }
 
 .infinite-scroll > div:hover {
-  border: 3px solid #8367FF;
-    box-shadow:
-  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-  0 12.5px 10px rgba(0, 0, 0, 0.06),
-  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-  0 100px 80px rgba(0, 0, 0, 0.12)
+  border: 3px solid #8367ff;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
-
-
 @media screen and (max-width: 900px) {
-  .infinite-scroll  {
+  .infinite-scroll {
     margin: 0 auto;
     columns: 3;
     column-gap: 2%;
@@ -48,46 +42,45 @@ body {
   }
 }
 
-
-.infinite-scroll > div >img {
+.infinite-scroll > div > img {
   width: 100%;
   border-radius: 8px;
 }
 
-.navbar{
+.navbar {
   width: 100%;
   display: flex;
+  justify-content: space-between;
   position: fixed;
-  background-color:#171544;
-  box-shadow:
-  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-  0 12.5px 10px rgba(0, 0, 0, 0.06),
-  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-  0 80px 60px rgba(0, 0, 0, 0.10)
+  background-color: #171544;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 80px 60px rgba(0, 0, 0, 0.1);
 }
-
-.navy-blue{
-  background-color:#171544;
+.navbar > div {
+  display: flex;
+}
+.navy-blue {
+  background-color: #171544;
   width: 100%;
-  height:400px
+  height: 400px;
 }
 
-.navImg{
-  width: 10%;
+.navImg {
+  width: 50%;
   height: 75px;
   margin-top: 0%;
 }
 
-.navPost{
-  width: 10%;
+.navPost {
+  width: 50%;
   height: 35px;
-  margin-top: 1.3%;
+  margin-top: 8.3%;
   margin-left: 3%;
 }
 
 @media screen and (max-width: 600px) {
-  .infinite-scroll  {
+  .infinite-scroll {
     margin: 0 auto;
     columns: 2;
     column-gap: 2%;
@@ -96,44 +89,43 @@ body {
     margin-right: 10%;
   }
 
-  form{
+  form {
     display: none;
   }
 }
 
-
 /* css for input bar */
 
-form {
+.form {
   color: #555;
   display: flex;
-  padding: 2px;
+  /* padding: 2px; */
   border-radius: 5px;
   margin-top: 1.3%;
-  margin-left: 6%;
-  height:35px;
+  height: 35px;
   background-color: #454469;
-  width:30%;
+  width: 35%;
 }
 
-input[type="search"] {
+#input {
   border: none;
   background: transparent;
   margin: 0;
   padding: 7px 8px;
   font-size: 14px;
-  color: inherit;
+  color: white;
+  background-color: #454469;
   border: 1px solid transparent;
   border-radius: inherit;
-  width: 100%;
+  width: 90%;
 }
 
-input[type="search"]::placeholder {
+.input::placeholder {
   color: rgb(160, 156, 156);
-  font-size:14px;
+  font-size: 14px;
 }
 
-button[type="submit"] {
+#submitbtn {
   text-indent: -999px;
   overflow: hidden;
   width: 40px;
@@ -141,84 +133,90 @@ button[type="submit"] {
   margin: 0;
   border: 1px solid transparent;
   border-radius: inherit;
-  background: transparent url("https://img.icons8.com/ios-filled/25/ffffff/search--v1.png") no-repeat center;
+  background: transparent
+    url("https://img.icons8.com/ios-filled/25/ffffff/search--v1.png") no-repeat
+    center;
   cursor: pointer;
   opacity: 0.7;
 }
 
-.icon{
-  margin-top:1.5%;
+.widgets {
+  width: 25%;
+  margin-top: 1%;
+}
+.icon {
+  margin-top: 1.5%;
   margin-left: 3%;
 }
 
-.adv_btn{
-  border:none;
-  background-color: #6432F9;
-  margin-top:1.5%;
-  width:9%;
+.adv_btn {
+  border: none;
+  background-color: #6432f9;
+  margin-top: 1.5%;
+  width: 40%;
   height: 35px;
-  margin-left:4%;
+  margin-left: 4%;
   color: #ffffff;
   font-size: 1.2vw;
-  font-weight:700;
-  border-radius:4px;
+  font-weight: 700;
+  border-radius: 4px;
 }
 
-.sign>a{
+.sign > a {
   text-decoration: none;
   color: #ffffff;
   font-size: 1.2vw;
-  font-weight:700;
+  font-weight: 700;
 }
 
-.sign{
+.sign {
   margin-left: 3%;
   margin-top: 1.7%;
+  width: 20%;
 }
-.sign_btn{
-  border:none;
-  background-color: #1BB76E;
-  margin-top:1.5%;
-  width:8%;
+.sign_btn {
+  border: none;
+  background-color: #1bb76e;
+  margin-top: 1.5%;
+  width: 40%;
   height: 35px;
-  margin-left:4%;
+  margin-left: 4%;
   color: #ffffff;
   font-size: 1.2vw;
-  font-weight:700;
-  border-radius:4px;
+  font-weight: 700;
+  border-radius: 4px;
 }
-
-
 
 @media screen and (max-width: 700px) {
-
-  form{
+  form {
     display: none;
   }
-  .icon{
+  .icon {
     display: none;
   }
-  .sign_btn,.adv_btn,h3>p{
-    margin-left:10%;
+  .sign_btn,
+  .adv_btn,
+  h3 > p {
+    margin-left: 10%;
   }
-  .navImg{
-  width: 10%;
-  margin-top: -5px;
-  margin-left: 2em;
+  .navImg {
+    width: 10%;
+    margin-top: -5px;
+    margin-left: 2em;
   }
-  .navPost{
-  margin-top: 1.3%;
-  margin-left: 8%;
+  .navPost {
+    margin-top: 1.3%;
+    margin-left: 8%;
   }
 }
 
-.word{
-  font-size:17px;
+.word {
+  font-size: 17px;
   text-align: center;
   color: #ffffff;
-} 
+}
 
-.blue{
+.blue {
   margin: 0 auto;
   columns: 8;
   column-gap: 2%;
@@ -227,8 +225,8 @@ button[type="submit"] {
   margin-right: 10%;
 }
 
-.div1{
+.div1 {
   width: 20%;
-  height:50px;
-  border:5px solid black;
+  height: 50px;
+  border: 5px solid black;
 }
