@@ -66,7 +66,6 @@ function startShowingResults(e) {
     }, time);
   }
 }
-
 async function showSuggestions(inputvalue) {
   showbox.textContent = null;
   let res = await fetch(
@@ -74,11 +73,16 @@ async function showSuggestions(inputvalue) {
   );
   let data = await res.json();
   console.log(data);
-  // let resultdata = data.related_searches;
-  // resultdata.forEach(() => {
-  //   let p = document.createElement("p");
-  //   p.innerText = d.title;
-  //   p.onclick = function () {};
-  //   showbox.append(p);
-  // });
+  let resultdata = data.organic_results;
+  resultdata.forEach((d) => {
+    let p = document.createElement("p");
+    p.innerText = d.title;
+    p.style.marginTop = "5px";
+    p.style.fontSize = "larger";
+    p.onclick = function () {
+      localStorage.setItem("imgur", JSON.stringify(resultdata));
+      window.location.href = "results.html";
+    };
+    showbox.append(p);
+  });
 }

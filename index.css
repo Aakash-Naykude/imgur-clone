@@ -47,13 +47,12 @@ body {
   border-radius: 8px;
 }
 
-
 .navbar-inner {
   display: flex;
 }
 .navy-blue {
   background-color: #171544;
-  border:1px solid red;
+  border: 1px solid red;
   width: 99.5%;
   height: 400px;
   margin-top: 0%;
@@ -151,12 +150,8 @@ body {
   width: 25%;
   margin-top: 1%;
   display: flex;
-<<<<<<< Updated upstream
   justify-content: space-between;
   margin-right: 1%;
-=======
-  
->>>>>>> Stashed changes
 }
 .icon {
   margin-top: 1.5%;
@@ -186,7 +181,7 @@ body {
 .sign {
   margin-left: 2%;
   margin-top: 2.5%;
-  font-size: 1.2vw
+  font-size: 1.2vw;
 }
 .sign_btn {
   border: none;
@@ -248,12 +243,12 @@ body {
   margin-right: 7%;
 }
 
-.heading{
-  font-size:2vw;
+.heading {
+  font-size: 2vw;
   font-weight: 600;
   text-align: center;
   margin-top: 7%;
-  color:#aed8ea;
+  color: #aed8ea;
 }
 
 #searchresults {
@@ -262,10 +257,17 @@ body {
   max-height: 450px;
   background-color: #3c424b;
   color: white;
-  padding: 15px;
+  padding: 10px;
   overflow: scroll;
   display: none;
 }
 #searchresults::-webkit-scrollbar {
   width: 0;
+}
+#searchresults > p:hover {
+  background-color: gray;
+}
+#searchresults > p {
+  height: 25px;
+  padding: 6px;
 }
